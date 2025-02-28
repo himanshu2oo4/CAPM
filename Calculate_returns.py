@@ -28,11 +28,20 @@ def app():
 
     tickers = []
 
-    table = soup.find('table',{"class": "wikitable sortable"})
-    rows = table.findAll('tr')[1:]
-    for row in rows:
-        ticker = row.findAll('td')[0].text
-        tickers.append(ticker[:-1])
+    table = soup.find('table')
+    data = table.find_all('td')
+    for i in data :
+        ndata = i.find('a' , class_ = 'external text')
+        if ndata :  
+            tickers.append(ndata.get_text())
+
+
+    # ----- old code 
+    # table = soup.find('table',{"class": "wikitable sortable"})
+    # rows = table.findAll('tr')[1:]
+    # for row in rows:
+    #     ticker = row.findAll('td')[0].text
+    #     tickers.append(ticker[:-1])
 
 
     #user inputs
