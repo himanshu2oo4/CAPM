@@ -1,4 +1,5 @@
 streamlit 
+setuptools
 seaborn
 requests
 google-generativeai
