@@ -28,42 +28,44 @@ st.set_page_config(
 # )
 # -----------------------------------------------------
 # removing the hamburgers and made with streamlit text from the page 
-st.markdown(
-    """
-    <style>
-        # #MainMenu {visibility: hidden;}
-        # .st-emotion-cache-1wbqy5l.e17vllj40 {visibility : hidden;}
-        # .st-emotion-cache-164nlkn.ea3mdgi1 {visibility : hidden;}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-css = """
-    <style>
-        body {
-            background-color: #006375;
-            font-family: 'Arial', sans-serif;
-            background-image: url('stocks2.jfif');
-            background-size: cover;
-            margin-top : 0px ;
-        }
-        .stApp {
-            max-width: 1500px;
-            margin: 0 auto;
-            margin-top : 0px;
-        }
-        .st-h1 {
-            color: #333333;
-            text-align: center;
-        }
-        .btn-primary {
-                color: #fff;
-                background-color: #007bff;
-                border-color: #007bff;
-        }
-    </style>
+# st.markdown(
 """
-st.markdown(css, unsafe_allow_html=True)
+    # <style>
+    #     # #MainMenu {visibility: hidden;}
+    #     # .st-emotion-cache-1wbqy5l.e17vllj40 {visibility : hidden;}
+    #     # .st-emotion-cache-164nlkn.ea3mdgi1 {visibility : hidden;}
+    # </style>
+    # """,
+    # unsafe_allow_html=True
+# )
+"""
+# css = """
+#     <style>
+#         body {
+#             background-color: #006375;
+#             font-family: 'Arial', sans-serif;
+#             background-image: url('stocks2.jfif');
+#             background-size: cover;
+#             margin-top : 0px ;
+#         }
+#         .stApp {
+#             max-width: 1500px;
+#             margin: 0 auto;
+#             margin-top : 0px;
+#         }
+#         .st-h1 {
+#             color: #333333;
+#             text-align: center;
+#         }
+#         .btn-primary {
+#                 color: #fff;
+#                 background-color: #007bff;
+#                 border-color: #007bff;
+#         }
+#     </style>
+"""
+
+# st.markdown(css, unsafe_allow_html=True)
 # marquee_html = """
 #     <style>
 #         .marquee {
