@@ -66,7 +66,7 @@ def app():
     genai.configure(api_key = os.getenv('Google_api_key'))
     # func to load gemini pro model 
 
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-pro-latest')
     chat = model.start_chat(history = [])
 
     def get_gemini_response(question):
@@ -116,11 +116,11 @@ def app():
         image = ''
         if uploaded_file!= None : 
             image = Image.open(uploaded_file)
-            st.image(image , caption= 'Uploaded image', use_column_width= True)
+            st.image(image , caption= 'Uploaded image', use_container_width= True)
         submit = st.button('Lets work on the image')
         if submit : 
             response = get_gemini_response(prompt , image)
             st.subheader('Response is : ')
-            st.write(response,use_column_width= True)
+            st.write(response,use_container_width= True)
 
 
